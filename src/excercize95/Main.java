@@ -1,3 +1,5 @@
+package excercize95;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
@@ -7,8 +9,8 @@ import static java.lang.Thread.sleep;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-//        baseTest();
-        transferTest();
+        baseTest();
+//        transferTest();
     }
 
     private static void withdrawFromAccount(SavingsAccount account) {
@@ -26,7 +28,7 @@ public class Main {
     }
 
     private static void baseTest() throws InterruptedException {
-        System.out.println("____________BASE__TEST__BEGINING___________");
+        System.out.println("____________BASE__TEST__BEGINING___________\n");
 
         SavingsAccount account = new SavingsAccount();
 
@@ -70,7 +72,7 @@ public class Main {
 
     static void transferTest() {
         System.out.println("____________TRANSFER__TEST__BEGINING___________");
-        ArrayList<SavingsAccount> savingsAccounts = new ArrayList<SavingsAccount>(10);
+        ArrayList<SavingsAccount> savingsAccounts = new ArrayList<>(10);
         Random random = new Random();
 
         for (int i = 0; i < 10; i++) {

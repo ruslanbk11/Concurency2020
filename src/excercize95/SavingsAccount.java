@@ -1,3 +1,5 @@
+package excercize95;
+
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -5,8 +7,8 @@ import java.util.concurrent.locks.ReentrantLock;
 class SavingsAccount {
     private int balance;
     private int numberOfPrefered;
-    private Lock lock;
-    private Condition condition;
+    private final Lock lock;
+    private final Condition condition;
 
     SavingsAccount() {
         balance = 0;
