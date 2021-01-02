@@ -1,19 +1,34 @@
 package tokenring;
 
-class Message {
+public class Message {
+    private int sender;
     private int destinationNodeIndex;
     private long dispatchTime;
 
-    Message(int destinationNodeIndex, long dispatchTime) {
+    public Message(int destinationNodeIndex, long dispatchTime) {
         this.destinationNodeIndex = destinationNodeIndex;
         this.dispatchTime = dispatchTime;
     }
 
-    int getDestinationNodeIndex() {
+    public Message(int sender, int destinationNodeIndex, long dispatchTime) {
+        this.sender = sender;
+        this.destinationNodeIndex = destinationNodeIndex;
+        this.dispatchTime = dispatchTime;
+    }
+
+    public int getDestinationNodeIndex() {
         return destinationNodeIndex;
     }
 
-    long getDispatchTime() {
+    public long getDispatchTime() {
         return dispatchTime;
+    }
+
+    public int getSender() {
+        return sender;
+    }
+
+    public void setSender(int sender) {
+        this.sender = sender;
     }
 }
